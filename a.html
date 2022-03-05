@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<script type="text/javascript" src="jquery-2.2.0.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$(document).ready(function(){
+			$('.przycisk').on('click', function(){
+				$(this).next().toggle('slow');				
+			});
+		});
+	});
+
+</script>
+<style type="text/css">
+	body{background: -moz-linear-gradient(right,#787475,#B2BABF,#787475);
+		background: -o-linear-gradient(right,#787475,#B2BABF,#787475);
+		background: -webkit-linear-gradient(right,#787475,#B2BABF,#787475);
+		background-position: center;
+		background-attachment: fixed;
+		background-repeat: no-repeat
+		background-size:contain;}
+	div#strona{min-height: 1000px;
+		width: 800px;
+		margin: auto;
+		margin-top: -8px;
+		background-color: #B2BABF;}
+	div#tytul{font-size: 2em;
+		color: #BF0426;
+		font-family: arial;
+		margin-top: 50px;
+		text-align: center;
+		clear: both;}
+	div#tytul2{margin-top: 40px;
+		font-size: 1.5em;
+		color: #BF0426;
+		text-decoration: underline;
+		margin-left: 10px;
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 15px;
+		font-style: italic;
+		font-style: bolder;}
+	button{margin: 15px;
+			float: right;
+			clear: both;}
+	div#spoiler{padding: 0;
+		display: none;
+		background-color: #272822;}
+	div#text{clear: both;
+		margin-right: 30px;
+		margin-left: 30px;}
+	footer#stopka{height: 20px;
+		font-size: 18px;
+		width: 800px;
+		margin: auto;
+		background-color: #EDF5E4;
+		margin-top: 30px;
+		clear: both;}
+	footer#dogory{color: black;
+		text-decoration: none;
+		width: 80px;
+		height: 20px;
+		background-color: #E9FF71;
+		display: block;
+		float: right;
+		text-align: center;}
+
+	/* MENU */
+
+	div#menu{margin-top: -5px;
+		background: -o-linear-gradient(top, #787475,#B2BABF,#787475);
+		background: -moz-linear-gradient(top, #787475,#B2BABF,#787475);
+		background: -webkit-linear-gradient(top, #787475,#B2BABF,#787475);}
+	div#menu>ul{padding:0;
+		margin: 0;}
+	div#menu>ul>li{text-align: center;
+		list-style: none;
+		margin:auto;
+		text-transform: uppercase;
+		float: left;
+		width: 19.75%;
+		height: 40px;
+		border-style: outset;
+		border-width: 2px 1px;
+		display: block;}
+	div#menu>ul>li>a:hover{background: -o-linear-gradient(top, #B2BABF,#787475,#B2BABF);
+		background: -moz-linear-gradient(top, #B2BABF,#787475,#B2BABF);
+		background: -webkit-linear-gradient(top, #B2BABF,#787475,#B2BABF);
+		text-decoration: underline;
+		border-style: inset;
+		border-width: 2px 1px;}
+	div#menu>ul>li>a{text-decoration: none;
+		color: black;
+		vertical-align: middle;
+		font-size: 16px;
+		display: block;
+		background: -o-linear-gradient(top, #787475,#B2BABF,#787475);
+		background: -moz-linear-gradient(top, #787475,#B2BABF,#787475);
+		background: -webkit-linear-gradient(top, #787475,#B2BABF,#787475);
+		height: 100%;}
+</style>
+<title>Znaczniki HTML 5 przykłady</title>
+</head>
+<body>
+<div id="strona">
+<img src="logostrony.jpg" width="800px" height="300px" />
+
+
+<div id="menu">
+<ul>
+<li><a href="index.html">sekcje strony</a></li>
+<li><a href="multimedia.html">multimedia</a></li>
+<li><a href="semantyka.html">semantyka tekstu</a></li>
+<li><a href="formularze.html">formularze<br/>i pole <i>input</i></a></li>
+<li><a href="interakcja.html">elementy interaktywne</a></li>
+</ul>
+</div>
+
+<div id="tytul">A</div>
+<div id="text">
+Definiuje kotwicę (odsyłacz, etykieta).
+
+<div id="tytul2">Atrybuty:</div>
+ACCESSKEY="znak" - Przypisuje klawisz dostępu do elementu<br/>
+CHARSET="kodowanie" - Określa sposób kodowania znaków zasobu, wyznaczonego przez odsyłacz<br/>
+CLASS="klasa" - Przypisuje nazwę klasy (CSS) lub nazwy klas do elementu, które muszą być rozdzielone białymi znakami<br/>
+COORDS="współrzędne" - Podaje współrzędne obszaru w mapie odnośników klienta (MAP), które zależą od kształtu obszaru (atrybut SHAPE):
+<ul>
+<li>x,y,r - (SHAPE="circle" - koło) x,y - środek koła; r - promień</li>
+<li>x1,y1,x2,y2,...,xN,yN - (SHAPE="poly" - wielokąt) x,y - współrzędne kolejnych wierzchołków wielokąta</li>
+<li>x1,y1,x2,y2 - (SHAPE="rect" - prostokąt) x1,y2 - lewy-górny wierzchołek prostokąta; x2,y2 - prawy-dolny wierzchołek</li>
+</ul>
+DIR="kierunek" - Kierunek tekstu:
+<ul>
+<li>ltr - od lewej do prawej</li>
+<li>rtl - od prawej do lewej</li>
+</ul>
+HREF="adres"- Określa lokalizację zasobu sieciowego, do którego odnosi się odsyłacz<br/>
+HREFLANG="język" - Określa język bazowy zasobu, wyznaczonego przez atrybut HREF<br/>
+ID="nazwa" - Przypisuje nazwę elementowi (identyfikator), która nie może się powtarzać w całym dokumencie<br/>
+LANG="język" - Informacja o języku bazowym (np.: LANG="en" oznacza angielski, LANG="pl" - polski itd.)<br/>
+NAME="nazwa" - Wprowadza nazwę, która może być celem innego odsyłacza (unikalną w dokumencie)<br/>
+REL="typ" - Opisuje relacje pomiędzy bieżącym dokumentem a kotwicą wyszczególnioną przez atrybut HREF (rozdzielona spacjami lista typów odsyłaczy):
+<ul>
+<li>alternate - wyznacza zastępczą wersję dokumentu</li>
+<li>appendix - dodatek w kolekcji dokumentów</li>
+<li>bookmark - zakładka</li>
+<li>chapter - rozdział w kolekcji dokumentów</li>
+<li>contents - spis treści</li>
+<li>copyright - prawa autorskie</li>
+<li>glossary - słownik</li>
+<li>help - odnosi się do dokumentu oferującego pomoc</li>
+<li>index - skorowidz</li>
+<li>next - odnosi się do następnego dokumentu w sekwencji</li>
+<li>prev - odnosi się do poprzedniego dokumentu w sekwencji</li>
+<li>section - dział w kolekcji dokumentów</li>
+<li>start - odnosi się do pierwszego dokumentu w kolekcji</li>
+<li>stylesheet - odnosi się do zewnętrznego arkusza stylów (CSS)</li>
+<li>subsection - "poddzał" w kolekcji dokumentów</li>
+</ul>
+REV="typ" - Opisuje adres zwrotny podany w atrybucie HREF (analogicznie jak w przypadku atrybutu REL)<br/>
+SHAPE="kształt" - Określa kształt obszaru w mapie odnośników klienta MAP (którego współrzędne podaje atrybut COORDS):
+<ul>
+<li>circle - koło</li>
+<li>default - określa całkowity obszar</li>
+<li>poly - wielokąt</li>
+<li>rect - prostokąt</li>
+</ul>
+STYLE="styl" - Informacje stylów (CSS)<br/>
+TABINDEX="liczba" - Określa pozycję elementu w kolejności wybierania tabulatorem<br/>
+TARGET="cel" - Podaje nazwę ramki, w której dokument będzie otwarty; ponadto możliwe jest tutaj podanie:
+<ul>
+<li>_blank - załadowanie do nowego okna</li>
+<li>_parent - do ramki nadrzędnej</li>
+<li>_self - do tej samej, w której znajduje się element</li>
+<li>_top - do pełnego, oryginalnego okna</li>
+</ul>
+TITLE="tekst" - Tekst pomocniczy<br/>
+TYPE="typ" - Określa typ zawartości pod adresem docelowym<br/>
+<div id="tytul2">Zdarzenia:</div>
+onfocus, onblur, onclick, ondblclick, onmousedown, onmouseup, onmouseover, onmousemove, onmouseout, onkeypress, onkeydown, onkeyup
+<br/><br/>
+<div id="tytul2">Znacznik otwierający:</div> wymagany
+<div id="tytul2">Znacznik zamykający:</div> wymagany
+<br/><br/>
+<div id="tytul2">Wyświetlanie:</div> w lini
+</div>
+<br/><br/><br/><br/>
+
+<footer id="dogory"><a href="javascript:scroll(0,0);">Do góry</a></footer>
+<footer id="stopka"><b>Zrobił Kacper Kawala</b></footer>
+</div>
+</body>
+</html>

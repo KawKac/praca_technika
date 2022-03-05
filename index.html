@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<script type="text/javascript" src="jquery-2.2.0.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$(document).ready(function(){
+			$('.przycisk').on('click', function(){
+				$(this).next().toggle('slow');				
+			});
+		});
+	});
+
+</script>
+<style type="text/css">
+	body{background: -moz-linear-gradient(right,#787475,#B2BABF,#787475);
+		background: -o-linear-gradient(right,#787475,#B2BABF,#787475);
+		background: -webkit-linear-gradient(right,#787475,#B2BABF,#787475);
+		background-position: center;
+		background-attachment: fixed;
+		background-repeat: no-repeat
+		background-size:contain;}
+	div#strona{min-height: 1000px;
+		width: 800px;
+		margin: auto;
+		margin-top: -8px;
+		background-color: #B2BABF;}
+	div#tytul{font-size: 2em;
+		color: #BF0426;
+		font-family: arial;
+		margin-top: 50px;
+		text-align: center;
+		clear: both;}
+	div#tytul2{margin-top: 40px;
+		font-size: 1.5em;
+		color: #BF0426;
+		text-decoration: underline;
+		margin-left: 10px;
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 15px;
+		font-style: italic;
+		font-style: bolder;}
+	button{margin: 15px;
+		float: right;
+		clear: both;}
+	div#spoiler{padding: 0;
+		display: none;
+		background-color: #272822;}
+	div#text{clear: both;
+		margin-right: 30px;
+		margin-left: 30px;}
+	footer#stopka{height: 20px;
+		font-size: 18px;
+		width: 800px;
+		margin: auto;
+		background-color: #EDF5E4;
+		margin-top: 30px;
+		clear: both;}
+	footer#dogory{color: black;
+		text-decoration: none;
+		width: 80px;
+		height: 20px;
+		background-color: #E9FF71;
+		display: block;
+		float: right;
+		text-align: center;}
+
+	/* MENU */
+
+	div#menu{margin-top: -5px;
+		background: -o-linear-gradient(top, #787475,#B2BABF,#787475);
+		background: -moz-linear-gradient(top, #787475,#B2BABF,#787475);
+		background: -webkit-linear-gradient(top, #787475,#B2BABF,#787475);}
+	div#menu>ul{padding:0;
+		margin: 0;}
+	div#menu>ul>li{text-align: center;
+		list-style: none;
+		margin:auto;
+		text-transform: uppercase;
+		float: left;
+		width: 19.75%;
+		height: 40px;
+		border-style: outset;
+		border-width: 2px 1px;
+		display: block;}
+	div#menu>ul>li>a:hover{background: -o-linear-gradient(top, #B2BABF,#787475,#B2BABF);
+		background: -moz-linear-gradient(top, #B2BABF,#787475,#B2BABF);
+		background: -webkit-linear-gradient(top, #B2BABF,#787475,#B2BABF);
+		text-decoration: underline;
+		border-style: inset;
+		border-width: 2px 1px;}
+	div#menu>ul>li>a{text-decoration: none;
+		color: black;
+		vertical-align: middle;
+		font-size: 16px;
+		display: block;
+		background: -o-linear-gradient(top, #787475,#B2BABF,#787475);
+		background: -moz-linear-gradient(top, #787475,#B2BABF,#787475);
+		background: -webkit-linear-gradient(top, #787475,#B2BABF,#787475);
+		height: 100%;}
+</style>
+<body>
+<div id="strona">
+<img src="logostrony.jpg" width="800px" height="300px" />
+
+
+<div id="menu">
+<ul>
+<li><a href="index.html">sekcje strony</a></li>
+<li><a href="multimedia.html">multimedia</a></li>
+<li><a href="semantyka.html">semantyka tekstu</a></li>
+<li><a href="formularze.html">formularze<br/>i pole <i>input</i></a></li>
+<li><a href="interakcja.html">elementy interaktywne</a></li>
+</ul>
+</div>
+
+
+<div id="tytul">Sekcje strony</div>
+<br/>
+<div id="tytul2">Header</div>
+<div id="text">Nagłowek dla naszej strony lub sekcji. Zazwyczaj zawiera w sobie znaczniki h1-h6, formularz wyszukiwania, nawigację czy logo. Nie ma ograniczeń co do ilości takich nagłówków.
+</div>
+<!-- przykłady -->
+<div id="text">
+<button class="przycisk">Przykład</button>
+<div id="spoiler">
+<img src="header.jpg">
+</div>
+</div>
+
+<br/>
+
+<div id="tytul2">Section</div>
+<div id="text">Tworzy sekcję dokumentu, czyli grupę z treścią, która różni się od innych treści zawartych na stronie. Powinna zawierać nagłówek.<br/><br/> Dobrym przykładem jest książka. Mamy tam rozdziały, które w HTMLu wyglądałyby właśnie jak sekcje.<br/><br/> Warto wiedzieć, że <i>section</i> nie używa się po to, żeby stworzyć coś na wzór <i>diva</i>, który po ostylowaniu będzie tylko pojemnikiem na inne elementy. W <i>section</i> musi istnieć zawartość, kóra w jakiś sposób wyróżnia się na tle strony, porusza inny temat, przedstawia coś innego - przykład z książką.
+</div>
+<!-- przykłady -->
+<div id="text">
+<button class="przycisk">Przykład</button>
+<div id="spoiler">
+<img src="section.jpg">
+</div>
+</div>
+
+<br/>
+
+<div id="tytul2">Article</div>
+<div id="text">Do tagu article wrzucamy treść, która ma jakieś znaczenie i mogłaby być umieszczona na stronie bez względu na jej pozostałą treść. Oznacza to, że <i>article</i> jest dobrym miejscem na komentarz, treść posta na forum czy blogu lub treść newsa. Często zawiera nagłówek, który może znajdować się w elemencie <i>header</i>.
+</div>
+<!-- przykłady -->
+<div id="text">
+<button class="przycisk">Przykład</button>
+<div id="spoiler">
+<img src="article.jpg">
+</div>
+</div>
+
+<br/>
+
+<div id="tytul2">Nav</div>
+<div id="text">W tym znaczniku powinna znajdować się <b>główna nawigacj</b> naszej strony, czyli odnośniki pozwalające poruszać się po witrynie. Nie chodzi tutaj jednak o wszystkie linijki na stronie, a o te główne. <br/><br/> Przykładowe użycie: menu na stronie, spis treści, formularz wyszukiwania.
+</div>
+<!-- przykłady -->
+<div id="text">
+<button class="przycisk">Przykład</button>
+<div id="spoiler">
+<img src="nav.jpg">
+</div>
+</div>
+
+<br/>
+
+<div id="tytul2">aside</div>
+<div id="text">W <i>aside</i> umieszczamy treść, która nie jest bezpośrednio związana z główną treścią strony, a jest dodatkiem - takie lekkie odbiegnięcie od tematu. Jeżeli tego dodatku by nie było, cała treść nadal miałaby swój sens i zachowała wartość.<br/><br/>Przykład: sidebar na stronie - mimo, że cała strona dotyczy jakiegoś tematu i każdy artykuł który się na niej znajduje traktuje o czymś innym, to sidebar zazwyczaj pozostaje taki sam na wszystkich podstronach, czyli w jakiś sposób "odchodzi w bok", jak mówi sama nazwa znacznika. Jednak ten sidebar ciągle jest powiązany ze stroną, bo przecież <b>na stronie poświęconej językowi HTML5 czy PHP nie umieścisz ogłoszenia o sprzedaży samochodów.</b><br/><br/> Ważna uwaga: <i>aside</i> powinien zawierać treść odbiegającą nieco od tematu, ale weź pod uwagę znacznik, w którym <i>aside</i> się znajduję. Jeżeli wrzucimy <i>aside</i> do <i>article</i>.</div>
+<!-- przykłady -->
+<div id="text">
+<button class="przycisk">Przykład</button>
+<div id="spoiler">
+<img src="aside.jpg">
+</div>
+</div>
+
+<br/>
+
+<div id="tytul2">footer</div>
+<div id="text"><i>Footer</i> czyli stopka elementu, w kórym się znajduje. Takich <i>footerów</i> możemy umieścić wiele. Zazwyczaj zawiera informacje o elemencie, w którym się znajduje, np. o autorze, odnośniki z menu, dane kontektowe czy linki społecznościowe.</div>
+<!-- przykłady -->
+<div id="text">
+<button class="przycisk">Przykład</button>
+<div id="spoiler">
+<img src="footer.jpg">
+</div>
+</div>
+
+<br/>
+
+<div id="tytul2">main</div>
+<div id="text">Stworzono po to, by wskazywał główną treść na stronie. łowną to znaczy taką, której poszukuje użytkownik, czyli bez menu strony, logo, stopki i innych niepotrzebnych do przeczytania artykułu elementów, Używając tego znacznika urządzenia takie jak czytniki ekranów będą wiedziały gdzie znajduje się najważniejsza treść strony.</div>
+<div id="text">
+<button class="przycisk">Przykład</button>
+<div id="spoiler">
+<img src="main.jpg">
+</div>
+</div>
+
+<br/><br/><br/><br/>
+
+<footer id="dogory"><a href="javascript:scroll(0,0);">Do góry</a></footer>
+<footer id="stopka"><b>Zrobił Kacper Kawala</b></footer>
+</div>
+</body>
+</html>

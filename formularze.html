@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<script type="text/javascript" src="jquery-2.2.0.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$(document).ready(function(){
+			$('.przycisk').on('click', function(){
+				$(this).next().toggle('slow');				
+			});
+		});
+	});
+
+</script>
+<style type="text/css">
+	body{background: -moz-linear-gradient(right,#787475,#B2BABF,#787475);
+		background: -o-linear-gradient(right,#787475,#B2BABF,#787475);
+		background: -webkit-linear-gradient(right,#787475,#B2BABF,#787475);
+		background-position: center;
+		background-attachment: fixed;
+		background-repeat: no-repeat
+		background-size:contain;}
+	div#strona{min-height: 1000px;
+		width: 800px;
+		margin: auto;
+		margin-top: -8px;
+		background-color: #B2BABF;}
+	div#tytul{font-size: 2em;
+		color: #BF0426;
+		font-family: arial;
+		margin-top: 50px;
+		text-align: center;
+		clear: both;}
+	div#tytul2{margin-top: 40px;
+		font-size: 1.5em;
+		color: #BF0426;
+		text-decoration: underline;
+		margin-left: 10px;
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 15px;
+		font-style: italic;
+		font-style: bolder;}
+	button{margin: 15px;
+		float: right;
+		clear: both;}
+	div#spoiler{padding: 0;
+		display: none;
+		background-color: #272822;
+		min-height: 25px;}
+	div#text{clear: both;
+		margin-right: 30px;
+		margin-left: 30px;}
+	footer#stopka{height: 20px;
+		font-size: 18px;
+		width: 800px;
+		margin: auto;
+		background-color: #EDF5E4;
+		margin-top: 30px;
+		clear: both;}
+	footer#dogory{color: black;
+		text-decoration: none;
+		width: 80px;
+		height: 20px;
+		background-color: #E9FF71;
+		display: block;
+		float: right;
+		text-align: center;}
+	div#lista{line-height: 25px;}
+	a{
+		text-decoration: none;
+		color: black;
+	}
+	a:hover{
+		background-color: grey;
+		text-decoration: underline;
+	}
+
+
+	/* MENU */
+
+	div#menu{margin-top: -5px;
+		background: -o-linear-gradient(top, #787475,#B2BABF,#787475);
+		background: -moz-linear-gradient(top, #787475,#B2BABF,#787475);
+		background: -webkit-linear-gradient(top, #787475,#B2BABF,#787475);}
+	div#menu>ul{padding:0;
+		margin: 0;}
+	div#menu>ul>li{text-align: center;
+		list-style: none;
+		margin:auto;
+		text-transform: uppercase;
+		float: left;
+		width: 19.75%;
+		height: 40px;
+		border-style: outset;
+		border-width: 2px 1px;
+		display: block;}
+	div#menu>ul>li>a:hover{background: -o-linear-gradient(top, #B2BABF,#787475,#B2BABF);
+		background: -moz-linear-gradient(top, #B2BABF,#787475,#B2BABF);
+		background: -webkit-linear-gradient(top, #B2BABF,#787475,#B2BABF);
+		text-decoration: underline;
+		border-style: inset;
+		border-width: 2px 1px;}
+	div#menu>ul>li>a{text-decoration: none;
+		color: black;
+		vertical-align: middle;
+		font-size: 16px;
+		display: block;
+		background: -o-linear-gradient(top, #787475,#B2BABF,#787475);
+		background: -moz-linear-gradient(top, #787475,#B2BABF,#787475);
+		background: -webkit-linear-gradient(top, #787475,#B2BABF,#787475);
+		height: 100%;}
+</style><title>Znaczniki HTML 5 przykłady</title>
+</head>
+<body>
+<div id="strona">
+<img src="logostrony.jpg" width="800px" height="300px" />
+
+
+<div id="menu">
+<ul>
+<li><a href="index.html">sekcje strony</a></li>
+<li><a href="multimedia.html">multimedia</a></li>
+<li><a href="semantyka.html">semantyka tekstu</a></li>
+<li><a href="formularze.html">formularze<br/>i pole <i>input</i></a></li>
+<li><a href="interakcja.html">elementy interaktywne</a></li>
+</ul>
+</div>
+<div id="tytul">Formularze</div>
+<br/>
+<div id="text">
+Umożliwiają wstawienie na stronie interaktywnych formularzy, które po wypełnieniu przez użytkownika mogą zostać wysłane na serwer, poprzez e-mail lub obsłużone przez skrypty działające w przeglądarce.
+
+<div id="tytul2">DATALIST</div>
+Tworzy listę rozwijaną (kombi) dla elementu INPUT. Element DATALIST nie wyświetla się na ekranie, dlatego nie powinien sprawiać kłopotów w przeglądarkach, które nie obsługują HTML5. Wtedy użytkownik będzie zmuszony co prawda ręcznie wpisać pełną wartość w polu, ale przynajmniej w formularzu nie pojawią się żadne nieoczekiwane elementy.
+<button class="przycisk">Przykład</button>
+<div id="spoiler">
+<img src="datalist.jpg">
+</div>
+
+<div id="tytul2">KEYGEN</div>
+Kontrolka do generowana pary kluczy kryptograficznych.
+
+<div id="tytul2">OUTPUT</div>
+Pewien rodzaj danych wyjściowych, np. wynik obliczeń ze skryptu.
+
+<div id="tytul2">PROGRESS</div>
+Stopień ukończenia zadania - np. pobierania albo w czasie wykonywania czasochłonnych operacji.
+<ul>
+	<li>Nieokreślony stopień ukończenia:<br/>
+		<button class="przycisk">Przykład</button>
+		<div id="spoiler">
+		<img src="progress1.jpg">
+		</div>
+	</li>
+	<br/>
+	<li>Pasek postępu:<br/>
+		<button class="przycisk">Przykład</button>
+		<div id="spoiler">
+		<img src="progress2.jpg">
+		</div>
+	</li>
+</ul>
+<br/><br/>
+<b><u>ALTERNATYWA</u></b><br/>
+Alternatywna zawartość, wyświetlana w przeglądarkach, które nie obsługują HTML5. Powinno się tam umieścić np. tekst "Proszę czekać..." albo "Ukończono: 50%".<br/>
+<b><u>WSPÓŁCZYNNIK</u></b><br/>
+Wartość z przedziału od 0.0 (stopień postępu 0%) do 1.0 (100%).<br/>
+<b><u>WARTOŚĆ</u></b><br/>
+Liczba z przedziału od 0 (zero) do maksimum.<br/>
+<b><u>MAKSIMUM</u></b><br/>
+Maksymalna wartość, po osiągnięciu której zadanie uważa się za ukończone (100%).<br/>
+
+<div id="tytul2">METER</div>
+Wynik pomiaru - np. zapełnienie dysku.
+<ul>
+	<li>Pasek wyniku:<br/>
+	<button class="przycisk">Przykład</button>
+		<div id="spoiler">
+		<img src="meter1.jpg">
+	</li><br/>
+	<li>Minimum i maksimum:<br/>
+	<button class="przycisk">Przykład</button>
+		<div id="spoiler">
+		<img src="meter1.jpg"></li><br/>
+	<li>Przedziały wartości:<br/>
+	<button class="przycisk">Przykład</button>
+		<div id="spoiler">
+		<img src="meter1.jpg"></li><br/>
+	<li>Wartość optymalna:<br/>
+	<button class="przycisk">Przykład</button>
+		<div id="spoiler">
+		<img src="meter1.jpg"></li>
+</ul>
+<b><u>ALTERNATYWA</u></b><br/>
+Alternatywna zawartość, wyświetlana w przeglądarkach, które nie obsługują HTML5. Powinno się tam umieścić np. zapisaną tekstowo wartość, którą przedstawia pasek wyniku.<br/>
+<b><u>WSPÓŁCZYNNIK</u></b><br/>
+Wartość z przedziału od 0.0 (0%) do 1.0 (100%).<br/>
+<b><u>WARTOŚĆ</u></b><br/>
+Liczba z przedziału od minimum do maskimum.<br/>
+<b><u>MINIMUM, MAKSIMUM</u></b><br/>
+Przedział dopuszczalnych wartości jakie może osiągnąć wynik.<br/>
+<b><u>NISKI, WYSOKI, OPTYMALNY</u></b><br/>
+Liczby z przedziału od 0.0 do 1.0 (niski ≤ wysoki), które określają, jaka wartość współczynnika jest uznawana odpowiednio za: niską, wysoką, optymalną.<br/>
+<b><u>NISKA, WYSOKA, OPTYMALNA</u></b><br/>
+Liczby z przedziału od minimum do maksimum (niska ≤ wysoka), które określają, jaka wartość jest uznawana odpowiednio za: niską, wysoką, optymalną.<br/>
+
+
+<br/><br/>
+Oprócz wymienionych tutaj znaczników, do elementów formularzy zaliczamy również:
+<a href="form.html" target="_blank">FORM</a>, 
+<a href="fieldset.html" target="_blank">FIELDSET</a>, 
+<a href="legend.html" target="_blank">LEGEND</a>, 
+<a href="label.html" target="_blank">LABEL</a>, 
+<a href="input.html" target="_blank">INPUT</a>, 
+<a href="button.html" target="_blank">BUTTON</a>, 
+<a href="select.html" target="_blank">SELECT</a>, 
+<a href="optgroup.html" target="_blank">OPTGROUP</a>, 
+<a href="option.html" target="_blank">OPTION</a>, 
+<a href="textarea.html" target="_blank">TEXTAREA</a>.
+</div>
+
+<hr/>
+
+<div id="tytul">Pole INPUT</div>
+<br/>
+<div id="text">
+Znany ze specyfikacji HTML 4.01 element INPUT, tworzy większość rodzajów kontrolek formularzy. O tym, jaki typ elementu zostanie wyświetlony na ekranie, decyduje wartość atrybutu <i>type="..."</i>. W języku HTML5 wprowadzono wiele dodatkowych typów kontrolek dla znacznika INPUT. W przypadku kiedy przeglądarka nie będzie obsługiwać nowych typów kontrolek, na ekranie zostanie wyświetlone zwykłe pole tekstowe (<i>input type="text"</i>).
+<br/><br/>
+Lista nowych typów elementu <b>INPUT</b> (wartości atrybutu <i>type="..."</i>):
+<div id="lista">
+<ul>
+<li><i>color</i> - Kolor (Firefox 29, Opera, Chrome)</li>
+<li><i>date</i> - Data (Opera, Chrome)</li>
+<li><i>datetime</i> - Data i czas (Opera 12-)</li>
+<li><i>datetime-local</i> - Data i czas lokalny (Opera, Chrome)</li>
+<li><i>email</i> - Adres poczty e-mail (Internet Explorer 10, Firefox, Opera, Chrome)</li>
+<li><i>month</i> - Miesiąc (Opera, Chrome)</li>
+<li><i>number</i> - Liczba (Firefox 29, Opera, Chrome)</li>
+<li><i>range</i> - Przedział liczbowy (Internet Explorer 10, Firefox, Opera, Chrome)</li>
+<li><i>search</i> - Pole wyszukiwania (interpretuje: Internet Explorer 10 Opera 15, Chrome)</li>
+<li><i>tel</i> - Numer telefonu</li>
+<li><i>time</i> - Czas (Opera, Chrome)</li>
+<li><i>url</i> - Adres URL (Internet Explorer 10, Firefox, Opera, Chrome)</li>
+<li><i>week</i> - Tydzień w roku (Opera, Chrome)</li>
+</ul>
+</div>
+</div>
+
+
+<br/><br/><br/><br/>
+
+<footer id="dogory"><a href="javascript:scroll(0,0);">Do góry</a></footer>
+<footer id="stopka"><b>Zrobił Kacper Kawala</b></footer>
+</div>
+</body>
+</html>

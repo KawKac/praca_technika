@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<script type="text/javascript" src="jquery-2.2.0.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$(document).ready(function(){
+			$('.przycisk').on('click', function(){
+				$(this).next().toggle('slow');				
+			});
+		});
+	});
+
+</script>
+<style type="text/css">
+	body{background: -moz-linear-gradient(right,#787475,#B2BABF,#787475);
+		background: -o-linear-gradient(right,#787475,#B2BABF,#787475);
+		background: -webkit-linear-gradient(right,#787475,#B2BABF,#787475);
+		background-position: center;
+		background-attachment: fixed;
+		background-repeat: no-repeat
+		background-size:contain;}
+	div#strona{min-height: 1000px;
+		width: 800px;
+		margin: auto;
+		margin-top: -8px;
+		background-color: #B2BABF;}
+	div#tytul{font-size: 2em;
+		color: #BF0426;
+		font-family: arial;
+		margin-top: 50px;
+		text-align: center;
+		clear: both;}
+	div#tytul2{margin-top: 40px;
+		font-size: 1.5em;
+		color: #BF0426;
+		text-decoration: underline;
+		margin-left: 10px;
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 15px;
+		font-style: italic;
+		font-style: bolder;}
+	button{margin: 15px;
+			float: right;
+			clear: both;}
+	div#spoiler{padding: 0;
+		display: none;
+		background-color: #272822;}
+	div#text{clear: both;
+		margin-right: 30px;
+		margin-left: 30px;}
+	footer#stopka{height: 20px;
+		font-size: 18px;
+		width: 800px;
+		margin: auto;
+		background-color: #EDF5E4;
+		margin-top: 30px;
+		clear: both;}
+	footer#dogory{color: black;
+		text-decoration: none;
+		width: 80px;
+		height: 20px;
+		background-color: #E9FF71;
+		display: block;
+		float: right;
+		text-align: center;}
+	a{
+		text-decoration: none;
+		color: black;
+	}
+	a:hover{
+		background-color: grey;
+		text-decoration: underline;
+	}
+
+	/* MENU */
+
+	div#menu{margin-top: -5px;
+		background: -o-linear-gradient(top, #787475,#B2BABF,#787475);
+		background: -moz-linear-gradient(top, #787475,#B2BABF,#787475);
+		background: -webkit-linear-gradient(top, #787475,#B2BABF,#787475);}
+	div#menu>ul{padding:0;
+		margin: 0;}
+	div#menu>ul>li{text-align: center;
+		list-style: none;
+		margin:auto;
+		text-transform: uppercase;
+		float: left;
+		width: 19.75%;
+		height: 40px;
+		border-style: outset;
+		border-width: 2px 1px;
+		display: block;}
+	div#menu>ul>li>a:hover{background: -o-linear-gradient(top, #B2BABF,#787475,#B2BABF);
+		background: -moz-linear-gradient(top, #B2BABF,#787475,#B2BABF);
+		background: -webkit-linear-gradient(top, #B2BABF,#787475,#B2BABF);
+		text-decoration: underline;
+		border-style: inset;
+		border-width: 2px 1px;}
+	div#menu>ul>li>a{text-decoration: none;
+		color: black;
+		vertical-align: middle;
+		font-size: 16px;
+		display: block;
+		background: -o-linear-gradient(top, #787475,#B2BABF,#787475);
+		background: -moz-linear-gradient(top, #787475,#B2BABF,#787475);
+		background: -webkit-linear-gradient(top, #787475,#B2BABF,#787475);
+		height: 100%;}
+</style>
+<title>Znaczniki HTML 5 przykłady</title>
+</head>
+<body>
+<div id="strona">
+<img src="logostrony.jpg" width="800px" height="300px" />
+
+
+<div id="menu">
+<ul>
+<li><a href="index.html">sekcje strony</a></li>
+<li><a href="multimedia.html">multimedia</a></li>
+<li><a href="semantyka.html">semantyka tekstu</a></li>
+<li><a href="formularze.html">formularze<br/>i pole <i>input</i></a></li>
+<li><a href="interakcja.html">elementy interaktywne</a></li>
+</ul>
+</div>
+
+<div id="tytul">Semantyka tekstu</div>
+<br/>
+<div id="text">
+Wprowadzają znaczenie (semantykę) do objętego nimi fragmentu tekstu.
+
+<div id="tytul">MARK</div>
+Zaznacza lub uwydatnia tekst w jednym dokumencie, w celu odwołania się do niego w innym kontekście.
+<div id="tytul">TIME</div>
+Data i/lub czas.
+<div id="tytul">RUBY, RT, RP</div>
+Przypisy ruby - specjalne krótkie wstawki obok bazowego tekstu, używane zwykle w dokumentach wschodnioazjatyckich do wskazania wymowy lub wstawienia krótkiej adnotacji. W języku japońskim ta forma przypisów jest również nazywana furigana.
+<div id="tytul">BDI</div>
+Obejmuje tekst, odizolowany od otaczającej go zawartości dla celów dwukierunkowego formatowania tekstu.
+<div id="tytul">WBR</div>
+Możliwość przełamania linii tekstu.
+Oprócz wymienionych tutaj znaczników, do elementów semantyki tekstu zaliczamy również:
+<a href="a.html" target="_blank">A</a>, 
+<a href="em.html" target="_blank">EM</a>, 
+<a href="strong.html" target="_blank">STRONG</a>, 
+<a href="small.html" target="_blank">SMALL</a>, 
+<a href="s.html" target="_blank">S</a>, 
+<a href="cite.html" target="_blank">CITE</a>, 
+<a href="q.html" target="_blank">Q</a>, 
+<a href="dfn.html" target="_blank">DFN</a>, 
+<a href="abbr.html" target="_blank">ABBR</a>, 
+<a href="code.html" target="_blank">CODE</a>, 
+<a href="var.html" target="_blank">VAR</a>, 
+<a href="samp.html" target="_blank">SAMP</a>, 
+<a href="kbd.html" target="_blank">KBD</a>, 
+<a href="sub.html" target="_blank">SUB</a>, 
+<a href="sup.html" target="_blank">SUP</a>, 
+<a href="i.html" target="_blank">I</a>, 
+<a href="b.html" target="_blank">B</a>, 
+<a href="u.html" target="_blank">U</a>, 
+<a href="bdo.html" target="_blank">BDO</a>, 
+<a href="span.html" target="_blank">SPAN</a>, 
+<a href="br.html" target="_blank">BR</a>
+</div>
+
+
+
+<br/><br/><br/><br/>
+
+<footer id="dogory"><a href="javascript:scroll(0,0);">Do góry</a></footer>
+<footer id="stopka"><b>Zrobił Kacper Kawala</b></footer>
+</div>
+</body>
+</html>
